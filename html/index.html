@@ -19,11 +19,11 @@
     <div class="container">
       <div class="header-wrapper d-flex align-items-center justify-content-between">
         <div class="logo">
-          <a href="index.html" class="logo-white text-white text-decoration-none fw-bold fs-4">
-            DWS
+          <a href="index.html" class="logo-white">
+            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid">
           </a>
-          <a href="index.html" class="logo-dark text-dark text-decoration-none fw-bold fs-4">
-            DWS
+          <a href="index.html" class="logo-dark">
+            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid">
           </a>
         </div>
         <div class="d-flex align-items-center gap-4">
@@ -538,20 +538,21 @@
               </div>
             </div>
             <div class="col-xl-8">
-              <form class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+              <form id="contactFormHome" class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div id="formMessageHome" class="alert d-none" role="alert"></div>
                 <div>
-                  <input type="text" class="form-control border-bottom border-dark" id="formGroupExampleInput"
+                  <input type="text" name="user_name" class="form-control border-bottom border-dark" id="contactNameHome"
                     placeholder="Name" required>
                 </div>
                 <div>
-                  <input type="email" class="form-control border-bottom border-dark" id="exampleInputEmail1"
+                  <input type="email" name="user_email" class="form-control border-bottom border-dark" id="contactEmailHome"
                     placeholder="Email" aria-describedby="emailHelp" required>
                 </div>
                 <div>
-                  <textarea class="form-control border-bottom border-dark" id="exampleFormControlTextarea1"
+                  <textarea name="message" class="form-control border-bottom border-dark" id="contactMessageHome"
                     placeholder="Tell us about your project" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn w-100 justify-content-center">
+                <button type="submit" class="btn w-100 justify-content-center" id="submitBtnHome">
                   <span class="btn-text">Submit message</span>
                   <iconify-icon icon="lucide:arrow-up-right"
                     class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
@@ -625,6 +626,8 @@
   <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
   <script src="../assets/libs/aos-master/dist/aos.js"></script>
   <script src="../assets/js/custom.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../assets/js/contact-form.js"></script>
   <!-- solar icons -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
