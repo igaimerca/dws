@@ -246,4 +246,46 @@
 .sign-in{
     max-width: 520px;
     width: 100%;
+
+    img {
+        max-width: 80px !important;
+        max-height: 80px !important;
+        width: 80px !important;
+        height: 80px !important;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.sign-up {
+    img {
+        max-width: 80px !important;
+        max-height: 80px !important;
+        width: 80px !important;
+        height: 80px !important;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.footer-logo {
+    img {
+        max-width: 150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        display: block;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 120px;
+            max-height: 120px;
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
 }
