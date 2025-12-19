@@ -1,48 +1,72 @@
 .header {
-    padding: 20px 0;
+    padding: 16px 0;
     z-index: 99;
     transition: all 0.5s ease-in-out;
     animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+    background-color: transparent;
 
     @include media-breakpoint-down(lg) {
-        padding: 16px 0;
+        padding: 14px 0;
     }
 
     &.fixed-header {
-        padding: 16px 0;
-        background-color: var(--bs-primary);
+        padding: 14px 0;
+        background-color: #343A40;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
         .logo {
             .logo-dark {
-                display: block;
+                display: none;
             }
 
             .logo-white {
-                display: none;
+                display: block;
             }
         }
 
         .light-dark {
-            color: var(--bs-dark) !important;
+            color: var(--bs-white) !important;
         }
 
         .toggle-menu {
-            background-color: var(--bs-dark) !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
 
             .menu-icon {
                 color: var(--bs-white) !important;
             }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2) !important;
+            }
+        }
+    }
+
+    .toggle-menu {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+        .menu-icon {
+            color: var(--bs-white) !important;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
         }
     }
 
     .logo {
         display: flex;
         align-items: center;
-        height: 120px;
+        height: 80px;
         flex-shrink: 0;
 
         .logo-dark {
             display: none;
+        }
+
+        .logo-white {
+            display: block;
         }
 
         a {
@@ -52,8 +76,8 @@
         }
 
         img {
-            max-width: 120px;
-            max-height: 120px;
+            max-width: 80px;
+            max-height: 80px;
             width: auto;
             height: auto;
             aspect-ratio: 1 / 1;
@@ -62,15 +86,6 @@
         }
 
         @include media-breakpoint-down(lg) {
-            height: 90px;
-
-            img {
-                max-width: 90px;
-                max-height: 90px;
-            }
-        }
-
-        @include media-breakpoint-down(md) {
             height: 70px;
 
             img {
@@ -78,18 +93,27 @@
                 max-height: 70px;
             }
         }
+
+        @include media-breakpoint-down(md) {
+            height: 60px;
+
+            img {
+                max-width: 60px;
+                max-height: 60px;
+            }
+        }
     }
 
     .header-wrapper {
-        min-height: 120px;
+        min-height: 80px;
         align-items: center;
 
         @include media-breakpoint-down(lg) {
-            min-height: 90px;
+            min-height: 70px;
         }
 
         @include media-breakpoint-down(md) {
-            min-height: 70px;
+            min-height: 60px;
         }
     }
 

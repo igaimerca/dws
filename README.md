@@ -1,10 +1,10 @@
-# Dave Works Services Ltd. (DWS)
+# Dave Works & Services Ltd. (DWS)
 
-A professional business website for Dave Works Services Ltd., a Rwanda-based company specializing in building completion, finishing works, and interior fit-outs.
+A professional business website for Dave Works & Services Ltd., a Rwanda-based company specializing in building completion, finishing works, and interior fit-outs.
 
 ## About
 
-Dave Works Services Ltd. translates architectural intent into finished spaces that meet the highest standards of quality, safety, and value. This website showcases the company's services, projects, and expertise in the construction and finishing industry.
+Dave Works & Services Ltd. translates architectural intent into finished spaces that meet the highest standards of quality, safety, and value. This website showcases the company's services, projects, and expertise in the construction and finishing industry.
 
 ## Features
 
