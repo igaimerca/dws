@@ -16403,7 +16403,7 @@ textarea.form-control-lg {
   }
 }
 .header {
-  padding: 16px 0;
+  padding: 10px 0;
   z-index: 99;
   transition: all 0.5s ease-in-out;
   animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
@@ -16411,11 +16411,11 @@ textarea.form-control-lg {
 }
 @media (max-width: 991.98px) {
   .header {
-    padding: 14px 0;
+    padding: 8px 0;
   }
 }
 .header.fixed-header {
-  padding: 14px 0;
+  padding: 8px 0;
   background-color: #343A40;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -16451,7 +16451,7 @@ textarea.form-control-lg {
 .header .logo {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 120px;
   flex-shrink: 0;
 }
 .header .logo .logo-dark {
@@ -16466,8 +16466,8 @@ textarea.form-control-lg {
   height: 100%;
 }
 .header .logo img {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 120px;
+  max-height: 120px;
   width: auto;
   height: auto;
   aspect-ratio: 1/1;
@@ -16476,34 +16476,34 @@ textarea.form-control-lg {
 }
 @media (max-width: 991.98px) {
   .header .logo {
-    height: 70px;
+    height: 100px;
   }
   .header .logo img {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 100px;
+    max-height: 100px;
   }
 }
 @media (max-width: 767.98px) {
   .header .logo {
-    height: 60px;
+    height: 85px;
   }
   .header .logo img {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 85px;
+    max-height: 85px;
   }
 }
 .header .header-wrapper {
-  min-height: 80px;
+  min-height: 120px;
   align-items: center;
 }
 @media (max-width: 991.98px) {
   .header .header-wrapper {
-    min-height: 70px;
+    min-height: 100px;
   }
 }
 @media (max-width: 767.98px) {
   .header .header-wrapper {
-    min-height: 60px;
+    min-height: 85px;
   }
 }
 .header .header-menu .header-item .header-link .animate-spin {
@@ -16527,7 +16527,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .banner-inner-section {
@@ -16763,6 +16763,78 @@ textarea.form-control-lg {
   }
 }
 
+.cursor-pointer {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.cursor-pointer:hover {
+  transform: scale(1.02);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.3s ease;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.lightbox-close:hover {
+  color: var(--bs-primary);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 767.98px) {
+  .lightbox-close {
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
