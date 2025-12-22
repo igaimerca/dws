@@ -1,8 +1,8 @@
 (function() {
-    const EMAILJS_PUBLIC_KEY = 'aOE3dWknbBO37EPba';
-    const EMAILJS_SERVICE_ID = 'service_e2gqlni';
-    const EMAILJS_TEMPLATE_ID = 'template_ztwzmpl';
-    const RECIPIENT_EMAIL = 'igaimerca@gmail.com';
+    const EMAILJS_PUBLIC_KEY = '_YW6hLtHZP05FKaxB';
+    const EMAILJS_SERVICE_ID = 'service_thetpp3';
+    const EMAILJS_TEMPLATE_ID = 'template_w5xjjqp';
+    const RECIPIENT_EMAIL = 'davidk@daveworksservices.com';
 
     emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -13,14 +13,15 @@
         
         const toast = document.createElement('div');
         toast.id = toastId;
+        const bgColor = isSuccess ? '#198754' : '#dc3545';
         toast.className = `alert ${toastClass} position-fixed top-0 end-0 m-4 shadow-lg border-0 d-flex align-items-center gap-3`;
-        toast.style.cssText = 'z-index: 9999; min-width: 300px; max-width: 500px; animation: slideInRight 0.3s ease-out;';
+        toast.style.cssText = `z-index: 9999; min-width: 300px; max-width: 500px; animation: slideInRight 0.3s ease-out; background-color: ${bgColor} !important;`;
         toast.setAttribute('role', 'alert');
         
         toast.innerHTML = `
-            <iconify-icon icon="${icon}" class="fs-5 flex-shrink-0"></iconify-icon>
-            <span class="flex-grow-1">${message}</span>
-            <button type="button" class="btn-close" aria-label="Close" onclick="this.closest('.alert').remove()"></button>
+            <iconify-icon icon="${icon}" class="fs-5 flex-shrink-0 text-white"></iconify-icon>
+            <span class="flex-grow-1 text-white">${message}</span>
+            <button type="button" class="btn-close btn-close-white" aria-label="Close" onclick="this.closest('.alert').remove()"></button>
         `;
         
         document.body.appendChild(toast);
@@ -121,6 +122,18 @@
                 transform: translateX(100%);
                 opacity: 0;
             }
+        }
+        .alert-success {
+            color: white !important;
+            background-color: #198754 !important;
+        }
+        .alert-danger {
+            color: white !important;
+            background-color: #dc3545 !important;
+        }
+        .alert-success *,
+        .alert-danger * {
+            color: white !important;
         }
     `;
     document.head.appendChild(style);
