@@ -38,8 +38,6 @@ DaveWorksServices-1.0.0/
 ├── html/             # HTML page templates
 │   ├── index.html
 │   ├── about-us.html
-│   ├── projects.html
-│   ├── blog.html
 │   ├── contact.html
 │   └── ...
 └── index.html        # Entry point (redirects to html/index.html)
@@ -80,19 +78,6 @@ php -S localhost:8000
 ### Development
 
 To modify styles, edit the SCSS files in `assets/scss/` and compile them to CSS. The main stylesheet is located at `assets/scss/styles.scss`.
-
-## Pages
-
-- **Home** (`html/index.html`) - Landing page with services overview
-- **About Us** (`html/about-us.html`) - Company information and team
-- **Projects** (`html/projects.html`) - Portfolio and completed projects
-- **Projects Detail** (`html/projects-detail.html`) - Individual project details
-- **Blog** (`html/blog.html`) - News and articles
-- **Blog Detail** (`html/blog-detail.html`) - Individual blog post
-- **Contact** (`html/contact.html`) - Contact form and information
-- **Privacy Policy** (`html/privacy-policy.html`) - Privacy policy page
-- **Terms and Conditions** (`html/terms-and-conditions.html`) - Terms page
-- **404** (`html/404.html`) - Error page
 
 ## Contact Information
 
